@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Address Converter</h2>
+        <input id="textAddress" type="text" placeholder="Enter Text Address"
+        value="AA080221197559552765">
+        <button id="convertToHex">Convert from text</button>
+        <input id="hexAddress" type="text" placeholder="Enter Hex Address">
+        <button id="convertToText">Convert from hex</button>
+        <input readonly="readonly" id="ethereumAddress" type="text" placeholder="Enter Ethereum Address">
+        <p id="error" style="color: red; display: none;">Invalid Address</p>
+    </div>
+    <script src="address-lib.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>
+
+
